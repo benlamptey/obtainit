@@ -1,0 +1,12 @@
+{
+  "name": "obtainit",
+  "version": "1.0.0",
+  "description": "obtain it theme 2017",
+  "main": "index.js",
+  "dependencies": {
+    "bootstrap-sass": "^3.3.7"
+  },
+  "devDependencies": {},
+  "author": "Ben Lamptey",
+  "license": "ISC"
+}

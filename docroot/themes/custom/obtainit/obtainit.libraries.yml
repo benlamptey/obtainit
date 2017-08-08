@@ -1,0 +1,11 @@
+global-css:
+  css:
+    theme:
+      css/style.css: {}
+global-js:
+  js:
+    js/main.js: {}
+    node_modules/owl.carousel/src/js/owl.carousel.js : {}
+    node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
+  dependencies:
+    - core/jquery
