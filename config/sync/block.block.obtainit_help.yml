@@ -1,0 +1,22 @@
+uuid: b4c86c87-4337-4537-b354-a60c688929cf
+langcode: en
+status: true
+dependencies:
+  module:
+    - help
+  theme:
+    - obtainit
+_core:
+  default_config_hash: 8I8iACSa0sKO3k3jlvUG1ge52rfcKX7USJAQYnzuBgg
+id: obtainit_help
+theme: obtainit
+region: content
+weight: -30
+provider: null
+plugin: help_block
+settings:
+  id: help_block
+  label: Help
+  provider: help
+  label_display: '0'
+visibility: {  }

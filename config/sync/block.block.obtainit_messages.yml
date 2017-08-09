@@ -1,0 +1,22 @@
+uuid: 7441d69d-b854-4f9a-932c-dfecf98138fb
+langcode: en
+status: true
+dependencies:
+  module:
+    - system
+  theme:
+    - obtainit
+_core:
+  default_config_hash: KHQIJ7Vfl25lTjzIc7qIvnuistt-Mw2O0kG4jCofmkI
+id: obtainit_messages
+theme: obtainit
+region: highlighted
+weight: 0
+provider: null
+plugin: system_messages_block
+settings:
+  id: system_messages_block
+  label: 'Status messages'
+  provider: system
+  label_display: '0'
+visibility: {  }

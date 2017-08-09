@@ -1,0 +1,20 @@
+uuid: 97c557a5-2847-45f0-b8c7-d7c49d3e62fd
+langcode: en
+status: true
+dependencies:
+  module:
+    - comment
+    - node
+id: node.field_suggestions
+field_name: field_suggestions
+entity_type: node
+type: comment
+settings:
+  comment_type: item_suggestions
+module: comment
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false

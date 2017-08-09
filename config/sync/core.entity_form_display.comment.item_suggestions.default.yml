@@ -1,0 +1,48 @@
+uuid: e2f86440-a4b9-4a25-8681-813d312a937b
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.item_suggestions
+    - field.field.comment.item_suggestions.field_address
+    - field.field.comment.item_suggestions.field_company
+    - field.field.comment.item_suggestions.field_item_url
+  module:
+    - address
+    - link
+id: comment.item_suggestions.default
+targetEntityType: comment
+bundle: item_suggestions
+mode: default
+content:
+  author:
+    weight: 0
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  field_address:
+    weight: 1
+    settings:
+      default_country: null
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_company:
+    weight: 3
+    settings:
+      match_operator: CONTAINS
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: entity_reference_autocomplete
+    region: content
+  field_item_url:
+    weight: 4
+    settings:
+      placeholder_url: ''
+      placeholder_title: ''
+    third_party_settings: {  }
+    type: link_default
+    region: content
+hidden:
+  subject: true

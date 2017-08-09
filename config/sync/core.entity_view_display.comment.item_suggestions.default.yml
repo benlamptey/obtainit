@@ -1,0 +1,50 @@
+uuid: ca7518e5-7624-4931-a2a4-4c60a140434e
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.item_suggestions
+    - field.field.comment.item_suggestions.field_address
+    - field.field.comment.item_suggestions.field_company
+    - field.field.comment.item_suggestions.field_item_url
+  module:
+    - address
+    - link
+id: comment.item_suggestions.default
+targetEntityType: comment
+bundle: item_suggestions
+mode: default
+content:
+  field_address:
+    weight: 101
+    label: above
+    settings: {  }
+    third_party_settings: {  }
+    type: address_default
+    region: content
+  field_company:
+    weight: 102
+    label: above
+    settings:
+      link: false
+    third_party_settings: {  }
+    type: entity_reference_label
+    region: content
+  field_item_url:
+    weight: 103
+    label: above
+    settings:
+      trim_length: 80
+      url_only: false
+      url_plain: false
+      rel: ''
+      target: ''
+    third_party_settings: {  }
+    type: link
+    region: content
+  links:
+    weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+hidden: {  }

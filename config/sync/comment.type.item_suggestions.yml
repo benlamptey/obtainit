@@ -1,0 +1,8 @@
+uuid: a23aded0-8b8c-49f3-9302-abb9cc743b50
+langcode: en
+status: true
+dependencies: {  }
+id: item_suggestions
+label: 'Item suggestions'
+target_entity_type_id: node
+description: ''

@@ -9849,14 +9849,27 @@ body {
 /* line 21, ../sass/components/_item-carousel.scss */
 .thumbnail-slider-container {
   margin-top: 5px;
+  width: 100%;
 }
 
-/* line 24, ../sass/components/_item-carousel.scss */
+/* line 25, ../sass/components/_item-carousel.scss */
+.thumbnail-slider {
+  width: 100%;
+}
+
+/* line 28, ../sass/components/_item-carousel.scss */
 .thumbnail-slider .content {
   padding: 5px;
 }
 
-/* line 27, ../sass/components/_item-carousel.scss */
-.thumbnail-slider .owl-item.active.center {
-  border: 3px solid #333333;
+/* line 32, ../sass/components/_item-carousel.scss */
+#thumbnailSlider .content,
+#thumbnailSlider .item {
+  width: 100px;
+}
+
+/* line 36, ../sass/components/_item-carousel.scss */
+#thumbnailSlider img {
+  height: 100px;
+  width: 100px;
 }

@@ -1,0 +1,28 @@
+uuid: 27957919-3b2e-46c5-a3d2-1b00b3d91065
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.item_suggestions
+    - field.storage.comment.field_company
+    - node.type.company
+id: comment.item_suggestions.field_company
+field_name: field_company
+entity_type: comment
+bundle: item_suggestions
+label: Company
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  handler: 'default:node'
+  handler_settings:
+    target_bundles:
+      company: company
+    sort:
+      field: _none
+    auto_create: false
+    auto_create_bundle: ''
+field_type: entity_reference

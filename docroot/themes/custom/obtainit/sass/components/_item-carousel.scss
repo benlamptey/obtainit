@@ -20,13 +20,20 @@
 }
 .thumbnail-slider-container{
   margin-top: 5px;
+  width:100%;
+}
+.thumbnail-slider {
+  width:100%;
 }
 .thumbnail-slider .content{
   padding:5px;
 }
-.thumbnail-slider .owl-item.active.center{
-  border: 3px solid #333333;
-}
-body {
 
+#thumbnailSlider .content,
+#thumbnailSlider .item {
+  width:100px;
+}
+#thumbnailSlider img {
+  height: 100px;
+  width: 100px;
 }

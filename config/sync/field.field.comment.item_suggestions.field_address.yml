@@ -1,0 +1,36 @@
+uuid: 331ae4d1-7173-4071-ace4-02cbb8a22efe
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.item_suggestions
+    - field.storage.comment.field_address
+  module:
+    - address
+id: comment.item_suggestions.field_address
+field_name: field_address
+entity_type: comment
+bundle: item_suggestions
+label: Address
+description: ''
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  available_countries:
+    GB: GB
+  fields:
+    administrativeArea: administrativeArea
+    locality: locality
+    postalCode: postalCode
+    addressLine1: addressLine1
+    organization: organization
+    dependentLocality: '0'
+    sortingCode: '0'
+    addressLine2: '0'
+    givenName: '0'
+    additionalName: '0'
+    familyName: '0'
+  langcode_override: ''
+field_type: address

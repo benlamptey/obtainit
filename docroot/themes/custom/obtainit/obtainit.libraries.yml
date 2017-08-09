@@ -9,3 +9,5 @@ global-js:
     node_modules/bootstrap-sass/assets/javascripts/bootstrap.min.js: {}
   dependencies:
     - core/jquery
+    - core/drupal
+    - core/drupalSettings

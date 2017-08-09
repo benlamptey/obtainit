@@ -1,0 +1,23 @@
+uuid: 6a355dd5-9cd3-454a-919f-65970e573b67
+langcode: en
+status: true
+dependencies:
+  config:
+    - comment.type.item_suggestions
+    - field.storage.comment.field_item_url
+  module:
+    - link
+id: comment.item_suggestions.field_item_url
+field_name: field_item_url
+entity_type: comment
+bundle: item_suggestions
+label: 'Item URL'
+description: 'If you know the direct link to purchase the product on the company site, insert it here!'
+required: false
+translatable: false
+default_value: {  }
+default_value_callback: ''
+settings:
+  link_type: 16
+  title: 0
+field_type: link

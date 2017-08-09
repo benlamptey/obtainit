@@ -1,0 +1,19 @@
+uuid: 72297ebc-bc9a-44b8-a9f9-36bfed254f14
+langcode: en
+status: true
+dependencies:
+  module:
+    - address
+    - comment
+id: comment.field_address
+field_name: field_address
+entity_type: comment
+type: address
+settings: {  }
+module: address
+locked: false
+cardinality: 1
+translatable: true
+indexes: {  }
+persist_with_no_fields: false
+custom_storage: false
