@@ -1,0 +1,26 @@
+<?php
+
+/**
+ * Implements template_preprocess_node()
+ * @see template_preprocess_node()
+ * @param $variables
+ */
+function obtainit_preprocess_node(&$variables) {
+  $node = $variables['node'];
+  $node_owner = $node->getOwner();
+
+  if ($node->getType() == 'item') {
+    $variables['contact_opt_in'] = $node->get('field_contact_opt_in')->value;
+    if ($variables['contact_opt_in'] == 1) {
+      $variables['node_owner_email'] = $node_owner->getEmail();
+      $variables['node_owner_mobile'] = $node_owner->get('field_number')->value;
+    }
+  }
+}
+
+function obtainit_preprocess_comments(&$variables) {
+
+}
+function obtainit_preprocess_comment(&$variables) {
+$r='f';
+}

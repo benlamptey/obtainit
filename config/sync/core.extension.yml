@@ -12,6 +12,7 @@ module:
   config: 0
   contact: 0
   contextual: 0
+  custom_obtain_comments: 0
   datetime: 0
   dblog: 0
   devel_generate: 0
@@ -36,6 +37,7 @@ module:
   search: 0
   sharethis: 0
   shortcut: 0
+  simple_gmap: 0
   system: 0
   taxonomy: 0
   text: 0

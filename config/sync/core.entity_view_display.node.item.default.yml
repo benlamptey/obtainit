@@ -6,6 +6,7 @@ dependencies:
     - core.entity_view_display.comment.item_suggestions.default
     - field.field.node.item.body
     - field.field.node.item.field_company
+    - field.field.node.item.field_contact_opt_in
     - field.field.node.item.field_item_images
     - field.field.node.item.field_suggestions
     - node.type.item
@@ -34,6 +35,16 @@ content:
     third_party_settings: {  }
     type: entity_reference_label
     region: content
+  field_contact_opt_in:
+    weight: 105
+    label: above
+    settings:
+      format: yes-no
+      format_custom_true: ''
+      format_custom_false: ''
+    third_party_settings: {  }
+    type: boolean
+    region: content
   field_item_images:
     weight: 104
     label: hidden
@@ -54,6 +65,11 @@ content:
     region: content
   links:
     weight: 100
+    region: content
+    settings: {  }
+    third_party_settings: {  }
+  sharethis:
+    weight: 10
     region: content
     settings: {  }
     third_party_settings: {  }

@@ -7,6 +7,7 @@ dependencies:
     - field.field.comment.item_suggestions.field_address
     - field.field.comment.item_suggestions.field_company
     - field.field.comment.item_suggestions.field_item_url
+    - field.field.comment.item_suggestions.field_map
   module:
     - address
     - link
@@ -43,6 +44,14 @@ content:
       placeholder_title: ''
     third_party_settings: {  }
     type: link_default
+    region: content
+  field_map:
+    weight: 5
+    settings:
+      size: 60
+      placeholder: ''
+    third_party_settings: {  }
+    type: string_textfield
     region: content
 hidden:
   subject: true

@@ -5,6 +5,7 @@ dependencies:
   config:
     - field.field.node.item.body
     - field.field.node.item.field_company
+    - field.field.node.item.field_contact_opt_in
     - field.field.node.item.field_item_images
     - field.field.node.item.field_suggestions
     - image.style.thumbnail
@@ -42,6 +43,12 @@ content:
       placeholder: ''
     third_party_settings: {  }
     type: entity_reference_autocomplete
+    region: content
+  field_contact_opt_in:
+    weight: 35
+    settings: {  }
+    third_party_settings: {  }
+    type: options_buttons
     region: content
   field_item_images:
     weight: 34

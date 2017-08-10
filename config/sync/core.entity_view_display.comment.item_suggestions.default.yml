@@ -7,9 +7,11 @@ dependencies:
     - field.field.comment.item_suggestions.field_address
     - field.field.comment.item_suggestions.field_company
     - field.field.comment.item_suggestions.field_item_url
+    - field.field.comment.item_suggestions.field_map
   module:
     - address
     - link
+    - simple_gmap
 id: comment.item_suggestions.default
 targetEntityType: comment
 bundle: item_suggestions
@@ -17,14 +19,14 @@ mode: default
 content:
   field_address:
     weight: 101
-    label: above
+    label: hidden
     settings: {  }
     third_party_settings: {  }
     type: address_default
     region: content
   field_company:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link: false
     third_party_settings: {  }
@@ -32,7 +34,7 @@ content:
     region: content
   field_item_url:
     weight: 103
-    label: above
+    label: hidden
     settings:
       trim_length: 80
       url_only: false
@@ -41,6 +43,25 @@ content:
       target: ''
     third_party_settings: {  }
     type: link
+    region: content
+  field_map:
+    weight: 104
+    label: hidden
+    settings:
+      include_map: true
+      apikey: ''
+      iframe_width: 200
+      iframe_height: 200
+      static_scale: 1
+      link_text: 'View larger map'
+      zoom_level: 14
+      map_type: m
+      langcode: en
+      include_static_map: false
+      include_link: false
+      include_text: false
+    third_party_settings: {  }
+    type: simple_gmap
     region: content
   links:
     weight: 100

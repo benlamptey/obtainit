@@ -8,12 +8,26 @@
       {{ content.body }}
       <div class="row">
         <div class="col-md-9">
-          contact user
+          {% if contact_opt_in == 1 %}
+            {{ 'Contact' |trans }} {{ author_name }}
+            <a href="tel:{{ node_owner_mobile }}">{{ node_owner_mobile }}</a>
+            <a href="mailto:{{ node_owner_email }}">{{ node_owner_email }}</a>
+          {% endif %}
         </div>
         <div class="col-md-3">
           {{ content.sharethis }}
         </div>
       </div>
+    </div>
+  </div>
+  <div class="row">
+    <div class="obtain-page-section obtain-page-section__padding">
+      <div class="obtain-page-section__header">
+        <div class="col-md-12">
+          <h2>{{ 'Possible locations'|trans }}</h2>
+        </div>
+      </div>
+      {{ content.field_suggestions }}
     </div>
   </div>
 </div>

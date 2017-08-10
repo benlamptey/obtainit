@@ -1,0 +1,42 @@
+<?php
+
+/**
+ * Implements hook_ENTITY_TYPE_presave().
+ */
+function custom_obtain_comments_comment_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  $type = $entity->bundle();
+  if ($type == 'item_suggestions') {
+    $address = $entity->get('field_address')->getValue;
+    $address_line_1 = $entity->field_address->address_line1;
+    $city = $entity->field_address->locality;
+    $postcode = $entity->field_address->postal_code;
+    $entity->field_map = $address_line_1 . ', ' . $city .', ' .$postcode;
+  }
+  $f='f';
+
+}
+
+/**
+ * Implements hook_entity_presave().
+ */
+function custom_obtain_comments_entity_presave(Drupal\Core\Entity\EntityInterface $entity) {
+  $f='f';
+
+}
+
+/**
+ * Implements hook_form_alter().
+ */
+function custom_obtain_comments_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $f='f';
+
+}
+
+/**
+ * Implements hook_form_FORM_ID_alter().
+ */
+function  custom_obtain_comments_form_comment_item_suggestions_form_alter(&$form, \Drupal\Core\Form\FormStateInterface $form_state, $form_id) {
+  $form['field_map']['#access'] = FALSE;
+  $f='f';
+
+}
