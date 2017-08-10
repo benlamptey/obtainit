@@ -1,0 +1,11 @@
+uuid: 76b4a6af-e3a7-4ad2-99f9-adf3e4c7cd9b
+langcode: en
+status: true
+dependencies: {  }
+id: node__item
+label: 'Content: Item'
+tags:
+  description: '[node:summary]'
+  image_src: '[node:field_item_images:0]'
+  robots: 'index, follow'
+  title: '[node:title] | [site:name]'

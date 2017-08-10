@@ -28,7 +28,7 @@ content:
     region: content
   field_company:
     weight: 102
-    label: above
+    label: hidden
     settings:
       link: true
     third_party_settings: {  }
@@ -36,7 +36,7 @@ content:
     region: content
   field_item_images:
     weight: 104
-    label: above
+    label: hidden
     settings:
       image_style: ''
       image_link: ''
@@ -45,7 +45,7 @@ content:
     region: content
   field_suggestions:
     weight: 103
-    label: above
+    label: hidden
     settings:
       view_mode: default
       pager_id: 0
@@ -55,4 +55,6 @@ content:
   links:
     weight: 100
     region: content
+    settings: {  }
+    third_party_settings: {  }
 hidden: {  }
