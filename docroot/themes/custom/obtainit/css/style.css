@@ -9961,9 +9961,55 @@ body {
 /* line 53, ../sass/components/nav/_main-menu.scss */
 .obtainit-main-nav-wrapper .obtainit-main-nav__button:hover {
   border: 0;
-  color: #00ccf9 !important;
+  color: #00a4e9 !important;
 }
 /* line 64, ../sass/components/nav/_main-menu.scss */
 .obtainit-main-nav-wrapper .obtainit-main-nav__logo {
   padding: 30px 0;
+}
+/* line 69, ../sass/components/nav/_main-menu.scss */
+.obtainit-main-nav-wrapper .obtainit-menu-wrapper {
+  background: #00a4e9;
+  position: fixed;
+  width: 80%;
+  height: 100%;
+  top: 0;
+  left: 0;
+}
+
+@media (min-width: 1024px) {
+  /* line 82, ../sass/components/nav/_main-menu.scss */
+  .obtainit-main-nav-wrapper .obtainit-main-nav__item {
+    position: relative;
+    display: inline-block;
+    padding-bottom: 3px;
+    transition: color 0.3s ease-out;
+  }
+  /* line 88, ../sass/components/nav/_main-menu.scss */
+  .obtainit-main-nav-wrapper .obtainit-main-nav__item:hover {
+    color: #000;
+    text-decoration: none;
+    border-bottom: 3px solid #000;
+  }
+  /* line 92, ../sass/components/nav/_main-menu.scss */
+  .obtainit-main-nav-wrapper .obtainit-main-nav__item:hover:after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  /* line 97, ../sass/components/nav/_main-menu.scss */
+  .obtainit-main-nav-wrapper .obtainit-main-nav__item:focus {
+    color: #000;
+    outline: none;
+  }
+  /* line 100, ../sass/components/nav/_main-menu.scss */
+  .obtainit-main-nav-wrapper .obtainit-main-nav__item:focus:after {
+    opacity: 1;
+    transform: translate3d(0, 0, 0);
+  }
+  /* line 108, ../sass/components/nav/_main-menu.scss */
+  .obtainit-main-nav-wrapper .obtainit-menu-wrapper {
+    position: relative;
+    background: none;
+    width: 100%;
+  }
 }
