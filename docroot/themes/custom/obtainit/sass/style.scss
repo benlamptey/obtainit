@@ -1,4 +1,9 @@
 @import '../node_modules/bootstrap-sass/assets/stylesheets/_bootstrap-custom.scss';
 @import '../node_modules/font-awesome/scss/font-awesome.scss';
 @import '../node_modules/owl.carousel/src/scss/owl.carousel.scss';
+
+@import 'includes/includes';
+@import 'base/base';
+
 @import 'components/components';
+@import 'components/nav/nav';

@@ -24,3 +24,10 @@ function obtainit_preprocess_comments(&$variables) {
 function obtainit_preprocess_comment(&$variables) {
 $r='f';
 }
+
+/**
+ * Implements hook_preprocess() for globals variables.
+ */
+function obtainit_preprocess(array &$variables) {
+//  $variables['TEMPLATE_DIR'] = $variables['directory'] . '/templates';
+}

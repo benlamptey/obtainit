@@ -1,0 +1,6 @@
+obtainit_styleguide.style_guide_controller:
+  path: '/style-guide'
+  defaults:
+    _controller: '\Drupal\obtainit_styleguide\Controller\StyleGuideController::content'
+  requirements:
+    _permission: 'access content'
