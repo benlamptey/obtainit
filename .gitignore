@@ -118,3 +118,4 @@ etc/nginx/ssl/*.p12
 
 # Ignore local settings file
 docroot/sites/settings.local.php
+docroot/themes/custom/obtainit/node_modules

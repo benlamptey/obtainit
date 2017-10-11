@@ -41,5 +41,9 @@
             // On change of thumbnail item to trigger main item
             slider.trigger('to.owl.carousel', [e.item.index, duration, true]);
         });
+        $('#obtainit-mobile-menu-trigger').click(function(){
+            $(this).toggleClass('open');
+            $('.obtainit-menu-wrapper').toggleClass('mobile-menu-open');
+        });
     });
 })(jQuery, Drupal);

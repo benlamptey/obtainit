@@ -3,16 +3,20 @@
     <nav class="obtainit-main-nav-wrapper">
       <div class="container">
         <div class="row">
-          <div class="col-md-3">
+          <div class="col-md-3 col-xs-9">
             <div class="obtainit-main-nav__logo">
               <img src="{{ TEMPLATE_DIR }}/images/obtainit.png">
             </div>
           </div>
-          <div class="col-md-9">
+          <div class="col-md-9 col-xs-3">
+            <div id="obtainit-mobile-menu-trigger" class="obtainit-main-nav__mobile-icon">
+              <span></span>
+              <span></span>
+              <span></span>
+            </div>
             <div class="obtainit-float-right">
-              <div class="obtainit-menu-wrapper">
-                <div class="obtainit-main-nav--mobile-icon"></div>
-                <ul class="obtainit-main-nav obtainit-main-nav--desktop">
+            <div class="obtainit-menu-wrapper">
+              <ul class="obtainit-main-nav obtainit-main-nav--mobile">
                 <li><a href="" class="obtainit-main-nav__item"><span class="obtainit-main-nav__label">{{ 'About' }}</span></a></li>
                 <li><a href="" class="obtainit-main-nav__item">{{ 'Services' }}</a></li>
                 <li><a href="" class="obtainit-main-nav__item">{{ 'Work' }}</a></li>
