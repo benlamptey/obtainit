@@ -1,4 +1,4 @@
-uuid: 96c15c3d-b316-41c7-b3b5-5e48a7a5bf13
+uuid: 528769ab-6366-4435-8080-8012a930428c
 langcode: en
 status: true
 dependencies:
@@ -8,9 +8,7 @@ dependencies:
     - system
   theme:
     - obtainit
-_core:
-  default_config_hash: rx9IrdDv7Ldc4kpalZAxdhIPZfYIeOMh1N-qKoQZwHo
-id: obtainit_main_menu
+id: mainnavigation
 theme: obtainit
 region: primary_menu
 weight: 0
@@ -22,5 +20,5 @@ settings:
   provider: system
   label_display: '0'
   level: 1
-  depth: 1
+  depth: 0
 visibility: {  }
