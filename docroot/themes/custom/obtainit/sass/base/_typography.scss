@@ -3,3 +3,10 @@ ul {
   margin: 0;
   padding: 0;
 }
+
+.large-title {
+  font-size: $font-size-xxl !important;
+  text-transform: uppercase;
+  color: $colour-grey !important;
+  font-weight: bold;
+}

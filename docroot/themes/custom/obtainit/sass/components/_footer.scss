@@ -1,6 +1,45 @@
 footer {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  padding: 1rem;
+  background-color: #f8f8f8;
+  .row {
+    border-bottom: 1px solid #e5e5e5;
+    .footer-content {
+      a {
+        color: #000;
+        text-underline: none;
+        text-transform: uppercase;
+        &:hover {
+          text-underline: none;
+        }
+      }
+      .footer-content-date {
+        color: #999999;
+        font-style: italic;
+      }
+    }
+  }
   .footer-title {
-    font-size: $font-size-sm;
-    color: #00f;
+    font-size: $font-size-md;
+    color: #333333;
+    text-transform: uppercase;
+  }
+  .footer-content-wrapper {
+    &.row {
+      border:0;
+    }
+  }
+  .footer-menu {
+    &__link {
+     color:$colour-grey;
+    }
+  }
+  .obtainit-copyright {
+    text-align: center;
+    font-weight: bold;
+    text-transform: uppercase;
   }
 }
