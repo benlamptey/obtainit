@@ -1,0 +1,30 @@
+.obtainit-login {
+  margin: 50px 0;
+  &__header {
+    color: $colour-dark-grey;
+  }
+  &__copy {
+    font-weight: bold;
+    color: $colour-deep-dark-grey;
+  }
+  a {
+    color: $colour-blue;
+  }
+  h2.rule {
+    width: 100%;
+    text-align: center;
+    border-bottom: 1px solid #cbcbcb;
+    line-height: 0.1em;
+    margin: 70px 0 20px;
+    span {
+      background: #fff;
+      padding: 0 10px;
+      color: $colour-blue;
+    }
+  }
+}
+
+.user-login-form {
+  width: 400px;
+  margin: 0 auto;
+}
