@@ -2,4 +2,138 @@
   &__hero {
     height: 380px;
   }
+  .__wrapper {
+
+  }
+  h1 {
+    color: #fff;
+  }
+  &__item {
+    width: calc(100% - 70px);
+    margin: 0 35px 30px;
+    position: relative;
+    //z-index: 1;
+    text-align: center;
+    &__title {
+      font-weight: bold;
+      a {
+        color: $colour-blue;
+        &:hover {
+          text-decoration: none;
+        }
+      }
+    }
+    &__comment_count {
+      color: $colour-violet;
+      font-size: $font-size-md;
+      font-weight: bold;
+    }
+  }
+
+}
+.obtainit-items-wrapper {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+
+@media (min-width: 600px) {
+  .obtainit-listing__item {
+    width: calc(50% - 30px);
+    margin: 0 15px 30px;
+  }
+}
+
+@media (min-width: $screen-md-min) {
+  .obtainit-listing__item {
+    width: calc(33.3333% - 30px);
+    margin: 0 15px 30px;
+    &:nth-last-child(2):first-child,
+    &:nth-last-child(4):first-child {
+      &,
+      & ~ .wp-card {
+        width: calc(50% - 30px);
+      }
+    }
+
+    &__header-title {
+      .wp & {
+        font-size: $font-size-xxl;
+      }
+    }
+
+    &__header-subtitle {
+      .wp & {
+        font-size: $font-size-sm;
+      }
+    }
+
+    &__header-copy {
+      .wp & {
+        font-size: $font-size-xs;
+      }
+    }
+
+    &__body {
+      padding: 14px 30px;
+
+      &--padding-bottom {
+        padding-bottom: 35px;
+      }
+
+      p {
+        line-height: 1.5rem;
+      }
+    }
+
+    &__footer {
+      padding: 14px 30px;
+    }
+
+    &__category {
+      .wp & {
+        margin: 10px 0 0;
+      }
+    }
+
+    &__copy {
+      .wp & {
+        margin: 10px 0;
+      }
+    }
+
+    &__title {
+      .wp & {
+        margin: 8px 0;
+      }
+    }
+
+    &--transparent-row {
+      flex-flow: row;
+
+      .wp-badge {
+        flex: 0 0 auto;
+      }
+
+      .wp-card__body {
+        text-align: left !important;
+        flex-grow: 1;
+      }
+    }
+
+    &__step {
+      font-size: 1.5rem;
+      margin-top: 2rem;
+    }
+  }
+
+  .wp-card-wrapper {
+    &.wp-card-wrapper--3-col .wp-card:nth-child(n) {
+      width: calc(33.333% - 30px);
+    }
+
+    &.wp-card-wrapper--2-col .wp-card:nth-child(n) {
+      width: calc(50% - 30px);
+    }
+  }
 }

@@ -1,0 +1,36 @@
+web:
+  image: drupaldocker/nginx:1
+  ports:
+    - 80
+  volumes_from:
+    - php
+  links:
+    - php
+
+php:
+  image: drupaldocker/php-dev:7
+  links:
+    - maria
+  volumes:
+    - ./docroot:/var/www/html
+
+drush:
+  image: drupaldocker/drush:8
+  links:
+    - maria
+    - web
+    - phantomjs
+  volumes_from:
+    - php
+
+solr:
+  image: solr:5.5-alpine
+  ports:
+    - 8983
+  volumes:
+    - ./modules/search_api_solr/solr-conf/5.x:/solr-conf/conf
+  entrypoint:
+    - docker-entrypoint.sh
+    - solr-precreate
+    - d8
+    - /solr-conf
