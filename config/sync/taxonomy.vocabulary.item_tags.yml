@@ -1,0 +1,9 @@
+uuid: 7fc00a66-606f-4232-a0d7-ead585f9c17f
+langcode: en
+status: true
+dependencies: {  }
+name: 'Item tags'
+vid: item_tags
+description: null
+hierarchy: 0
+weight: 0
