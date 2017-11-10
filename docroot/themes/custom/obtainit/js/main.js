@@ -45,5 +45,10 @@
             $(this).toggleClass('open');
             $('.obtainit-menu-wrapper').toggleClass('mobile-menu-open');
         });
+
+        // Show/hide filters
+        $('.obtainit-listing__filters h3').click(function() {
+            $( "ul" ).toggle()
+        });
     });
 })(jQuery, Drupal);

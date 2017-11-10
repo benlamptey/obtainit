@@ -27,27 +27,17 @@
 {{ menus.menu_links(items, attributes, 0) }}
 
 {% macro menu_links(items, attributes, menu_level) %}
-{%
-set classes = [
-'obtainit-main-nav',
-'obtainit-main-nav--desktop',
-]
-%}
   {% import _self as menus %}
   {% if items %}
-    {% if menu_level == 0 %}
-      <ul {{ attributes }} class="obtainit-main-nav obtainit-main-nav--desktop">
-    {% else %}
-      <ul>
-    {% endif %}
-    {% for item in items %}
-      <li{{ item.attributes }}>
-        {{ link(item.title, item.url, {'class' : 'obtainit-main-nav__item'}) }}
-        {% if item.below %}
-          {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
-        {% endif %}
-      </li>
-    {% endfor %}
+    <ul {{ attributes }} class="obtainit-main-nav obtainit-main-nav--mobile">
+      {% for item in items %}
+        <li{{ item.attributes }}>
+          <span class="obtainit-main-nav__label">{{ link(item.title, item.url, {'class' : 'obtainit-main-nav__item'}) }}</span>
+          {% if item.below %}
+            {{ menus.menu_links(item.below, attributes, menu_level + 1) }}
+          {% endif %}
+        </li>
+      {% endfor %}
     </ul>
   {% endif %}
 {% endmacro %}
