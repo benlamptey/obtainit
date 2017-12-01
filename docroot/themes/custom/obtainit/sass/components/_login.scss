@@ -9,6 +9,62 @@
   }
   a {
     color: $colour-blue;
+    &.obtainit-login__facebook {
+      display: inline-block;
+      width: 205px;
+      height: 35px;
+      color: #fff;
+      border: 1px solid #3b5998;
+      background-color: #3b5998;
+      border-radius: 3px;
+      padding: 7px;
+      i {
+        border-right: 1px solid #344f88;
+        display: inline;
+        padding-right: 12px;
+        margin-right: 0;
+        position: relative;
+        font-size: $font-size-xl;
+        &:after{
+          border-right: 1px solid #4264ac;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        color: #3b5998;
+        background-color: #fff;
+      }
+      span {
+        padding-left:10px;
+      }
+    }
+    &.obtainit-login__twitter {
+      display: inline-block;
+      width: 205px;
+      height: 35px;
+      color: #fff;
+      border: 1px solid #1da1f2;
+      background-color: #1da1f2;
+      border-radius: 3px;
+      padding: 7px;
+      i {
+        border-right: 1px solid #1a8dd3;
+        padding-right: 5px;
+        font-size: $font-size-xl;
+        text-align: left;
+        &:after{
+          border-right: 1px solid #1a8dd3;
+        }
+      }
+      &:hover {
+        text-decoration: none;
+        color: #1da1f2;
+        background-color: #fff;
+      }
+      span {
+        padding-left:10px;
+      }
+    }
   }
   h2.rule {
     width: 100%;
@@ -28,6 +84,6 @@
 }
 
 .user-login-form {
-  width: 400px;
+  width: 500px;
   margin: 0 auto;
 }
