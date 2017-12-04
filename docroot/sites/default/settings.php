@@ -763,12 +763,27 @@ $settings['file_scan_ignore_directories'] = [
 # if (file_exists($app_root . '/' . $site_path . '/settings.local.php')) {
 #   include $app_root . '/' . $site_path . '/settings.local.php';
 # }
-$databases['default']['default'] = array (
+# Local machine connection
+/*
+ * $databases['default']['default'] = array (
   'database' => 'obtain_it',
   'username' => 'root',
   'password' => '',
   'prefix' => '',
   'host' => 'localhost',
+  'port' => '3306',
+  'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
+  'driver' => 'mysql',
+); */
+
+
+# * Docker Connection
+  $databases['default']['default'] = array (
+  'database' => 'drupal_db_obtainit',
+  'username' => 'root',
+  'password' => 'password',
+  'prefix' => '',
+  'host' => 'db',
   'port' => '3306',
   'namespace' => 'Drupal\\Core\\Database\\Driver\\mysql',
   'driver' => 'mysql',

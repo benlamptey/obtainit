@@ -1,36 +1,38 @@
-web:
-  image: drupaldocker/nginx:1
-  ports:
-    - 80
-  volumes_from:
-    - php
-  links:
-    - php
+version: '3.1'
 
-php:
-  image: drupaldocker/php-dev:7
-  links:
-    - maria
-  volumes:
-    - ./docroot:/var/www/html
+services:
 
-drush:
-  image: drupaldocker/drush:8
-  links:
-    - maria
-    - web
-    - phantomjs
-  volumes_from:
-    - php
+# PHP/Apache with mysql-client
+  app:
+    container_name: obtain_it_app
+    image: codepulse/php-7.2.0-apache-mysql
+    volumes:
+      - .:/var/www:cached
+      - ./Docker/etc/apache2/000-default.conf:/etc/apache2/sites-available/000-default.conf:cached
 
-solr:
-  image: solr:5.5-alpine
-  ports:
-    - 8983
-  volumes:
-    - ./modules/search_api_solr/solr-conf/5.x:/solr-conf/conf
-  entrypoint:
-    - docker-entrypoint.sh
-    - solr-precreate
-    - d8
-    - /solr-conf
+    working_dir: /var/www/docroot
+    depends_on:
+      - db
+    ports:
+      - "8001:80"
+    links:
+      - db
+    restart: always
+
+# Database service
+  db:
+    image: percona:5.7
+    volumes:
+      - db_data:/var/lib/mysql
+    ports:
+      - "3309:3306"
+    restart: always
+    environment:
+      MYSQL_ROOT_PASSWORD: password
+      MYSQL_DATABASE: drupal_db_obtainit
+      MYSQL_USER: root
+      MYSQL_PASSWORD: password
+
+# Volumes to make sure I do not lose any data
+volumes:
+  db_data:
