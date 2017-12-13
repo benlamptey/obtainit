@@ -1,0 +1,31 @@
+{% extends directory ~ '/templates/system/page.html.twig' %}
+
+{% block page_content %}
+  <div class="obtainit-wrapper">
+    <section class="obtainit-section obtainit-listing">
+      <div class="obtainit-listing__hero" style="background-image: url('{{ TEMPLATE_DIR }}/images/bokeh-one.jpeg');">
+        <div class="container">
+          <h1 class="text-uppercase">Helping the community</h1>
+        </div>
+      </div>
+      <div class="obtainit-listing__wrapper obtainit-padding-top">
+        <div class="container">
+          <div class="col-lg-2 col-md-12">
+            <nav class="obtainit-listing__filters">
+              {{ page.sidebar_first }}
+            </nav>
+          </div>
+          <div class="col-lg-10 col-md-12">
+            <div class="row">
+              {{ page.content }}
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+{% endblock page_content %}
+
+{% block layout_container %}
+  {# Override parent #}
+{% endblock layout_container %}

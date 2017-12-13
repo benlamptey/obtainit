@@ -13,6 +13,10 @@
     margin: 0 35px 30px;
     position: relative;
     text-align: center;
+    img {
+      width: 270px;
+      height: auto;
+    }
     &__title {
       font-weight: bold;
       a {
