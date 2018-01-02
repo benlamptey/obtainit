@@ -44,12 +44,12 @@ function obtainit_form_user_login_form_alter(&$form, \Drupal\Core\Form\FormState
   unset($form['pass']['#description']);
   $form['facebook_login'] = array(
     '#type' => 'markup',
-    '#markup' => '<a href="/user/simple-fb-connect" class="obtainit-login__facebook text-align-left"><i class="fa fa-facebook"></i><span>Log In with Facebook</span></a>',
+    '#markup' => '<a href="/user/simple-fb-connect" class="obtainit-login__facebook obtainit-left text-align-left obtainit-margin-bottom"><i class="fa fa-facebook"></i><span>Log In with Facebook</span></a>',
     '#weight' => -100,
   );
   $form['twitter_login'] = array(
     '#type' => 'markup',
-    '#markup' => '<a href="/user/simple-fb-connect" class="obtainit-login__twitter text-align-left"><i class="fa fa-twitter"></i><span>Log In with Twitter</span></a>',
+    '#markup' => '<a href="/user/simple-fb-connect" class="obtainit-login__twitter obtainit-right text-align-left obtainit-margin-bottom"><i class="fa fa-twitter"></i><span>Log In with Twitter</span></a>',
     '#weight' => -100,
   );
   $form['name']['#attributes']['placeholder'][] = strtoupper($form['name']['#title']) . ' *';

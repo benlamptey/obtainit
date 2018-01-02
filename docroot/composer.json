@@ -10,7 +10,9 @@
         "drupal/devel": "^1.0@RC",
         "drupal/simple_fb_connect": "^3.1",
         "drupal/search_api_solr": "^1.2",
-        "drupal/facets": "^1.0@beta"
+        "drupal/facets": "^1.0@beta",
+        "drupal/social_login": "^1.6",
+        "drupal/social_auth_twitter": "^1.0@beta"
     },
     "replace": {
         "drupal/core": "~8.3"

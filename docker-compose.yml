@@ -9,14 +9,17 @@ services:
     volumes:
       - .:/var/www:cached
       - ./Docker/etc/apache2/000-default.conf:/etc/apache2/sites-available/000-default.conf:cached
+      - ./Docker/etc/php/php.ini:/usr/local/etc/php/conf.d/php.ini:cached
 
     working_dir: /var/www/docroot
+    env_file: .env
     depends_on:
       - db
     ports:
       - "8001:80"
     links:
       - db
+      - obtainit_solr:solr.obtainit.localhost
     restart: always
 
 # Database service
@@ -33,6 +36,22 @@ services:
       MYSQL_USER: root
       MYSQL_PASSWORD: password
 
+  obtainit_solr:
+    container_name: obtainit_solr
+    image: solr:6-alpine
+    volumes:
+      - obtainit-solr:/opt/solr/server/solr/obtainit_index_conf:cached
+      - ./docroot/modules/contrib/search_api_solr/solr-conf/6.x:/solr-conf/conf:cached
+    ports:
+      - 8983:8983
+    entrypoint:
+      - docker-entrypoint.sh
+      - solr-precreate
+      - obtainit_index_conf
+      - /solr-conf
+
+
 # Volumes to make sure I do not lose any data
 volumes:
   db_data:
+  obtainit-solr:
